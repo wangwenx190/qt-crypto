@@ -1,22 +1,11 @@
-#ifndef QAESENCRYPTION_H
-#define QAESENCRYPTION_H
+#pragma once
 
-#ifdef QtAES_EXPORTS
-#include "qtaes_export.h"
-#else
-#define QTAESSHARED_EXPORT
-#endif
+#include "qtcrypto_global.h"
 
 #include <QObject>
 #include <QByteArray>
 
-#ifdef __linux__
-#ifndef __LP64__
-#define do_rdtsc _do_rdtsc
-#endif
-#endif
-
-class QTAESSHARED_EXPORT QAESEncryption : public QObject
+class QTCRYPTO_API QAESEncryption : public QObject
 {
     Q_OBJECT
 public:
@@ -221,5 +210,3 @@ private:
     const quint8 Rcon[14] = {
         0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36, 0x6c, 0xd8, 0xab};
 };
-
-#endif // QAESENCRYPTION_H

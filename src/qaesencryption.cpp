@@ -1,10 +1,10 @@
 #include "qaesencryption.h"
 
 #ifdef USE_INTEL_AES_IF_AVAILABLE
-#include "aesni/aesni-key-exp.h"
-#include "aesni/aesni-key-init.h"
-#include "aesni/aesni-enc-ecb.h"
-#include "aesni/aesni-enc-cbc.h"
+#  include "aesni/aesni-key-exp.h"
+#  include "aesni/aesni-key-init.h"
+#  include "aesni/aesni-enc-ecb.h"
+#  include "aesni/aesni-enc-cbc.h"
 #endif
 
 /*

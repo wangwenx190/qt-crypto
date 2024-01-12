@@ -41,6 +41,7 @@ see https://www.gnu.org/licenses/.  */
    mpn/generic/sbpi1_div_qr.c, mpn/generic/sub_n.c,
    mpn/generic/submul_1.c. */
 
+#include "mini-gmp.h"
 #include <assert.h>
 #include <ctype.h>
 #include <limits.h>
@@ -48,8 +49,7 @@ see https://www.gnu.org/licenses/.  */
 #include <stdlib.h>
 #include <string.h>
 
-#include "mini-gmp.h"
-
+#define UN_USED(X) (void)X
 
 /* Macros */
 #define GMP_LIMB_BITS (sizeof(mp_limb_t) * CHAR_BIT)

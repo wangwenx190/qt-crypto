@@ -6,8 +6,6 @@
 //#
 
 #include "bigint.h"
-#include <limits>
-#include <cstring>
 #include <cmath>
 
 // constructors

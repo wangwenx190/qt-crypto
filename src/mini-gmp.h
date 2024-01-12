@@ -35,8 +35,7 @@ see https://www.gnu.org/licenses/.  */
 
    This file defines the public interface. */
 
-#ifndef MINI_GMP
-#define MINI_GMP
+#pragma once
 
 /* For size_t */
 #include <stddef.h>
@@ -44,8 +43,6 @@ see https://www.gnu.org/licenses/.  */
 #if defined (__cplusplus)
 extern "C" {
 #endif
-
-#define UN_USED(X) (void)X
 
 void mp_set_memory_functions (void *(*) (size_t),
                   void *(*) (void *, size_t, size_t),
@@ -300,4 +297,3 @@ void *mpz_export (void *, size_t *, int, size_t, int, size_t, const mpz_t);
 #if defined (__cplusplus)
 }
 #endif
-#endif /* MINI_GMP */

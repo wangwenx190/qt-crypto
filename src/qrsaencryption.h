@@ -5,23 +5,24 @@
 //# of this license document, but changing it is not allowed.
 //#
 
-#ifndef QRSAENCRYPTION_H
-#define QRSAENCRYPTION_H
+#pragma once
+
+#include "qtcrypto_global.h"
 
 #include <QByteArray>
 #include <QList>
 #include <QFile>
-#include <cmath>
 #include <QDebug>
 #include <QCryptographicHash> // to use sha256
-#include "./../qtsecret_global.h"
+
+#include <cmath>
 
 #include <bigint.h>
 
 /**
  * @brief The QRSAEncryption class Fast encryption class for RSA algorithm.
  */
-class Qt_SECRETSHARED_EXPORT QRSAEncryption
+class QTCRYPTO_API QRSAEncryption
 {
 public:
     typedef BigInt INT;
@@ -259,5 +260,3 @@ private:
 
 
 };
-
-#endif // QRSAENCRYPTION_H

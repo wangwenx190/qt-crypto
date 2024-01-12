@@ -6,12 +6,11 @@
 //#
 
 #include "qrsaencryption.h"
-
 #include <QString>
+#include <QTextStream>
 #include <iostream>
 #include <ctime>
 #include <chrono>
-#include <QTextStream>
 
 #define KEY_GEN_LIMIT 10
 
