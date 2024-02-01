@@ -6,7 +6,7 @@ option(QC_BUILD_STATIC "Build static library." OFF)
 option(QC_ENABLE_INSTALL "Enable install." OFF)
 
 if(NOT DEFINED CMAKE_BUILD_TYPE AND NOT DEFINED CMAKE_CONFIGURATION_TYPES)
-    set(CMAKE_BUILD_TYPE Release)
+    set(CMAKE_BUILD_TYPE "Release")
 endif()
 
 if(NOT DEFINED CMAKE_DEBUG_POSTFIX)
@@ -46,10 +46,8 @@ if(NOT TARGET qmsetup::library)
     set(qmsetup_DIR ${_qms_package_path} CACHE PATH "" FORCE)
 endif()
 
-qm_import(Filesystem)
+qm_import(Filesystem CompilerOptions)
 qm_init_directories()
-
-qm_import(CompilerOptions)
 qm_compiler_no_warnings()
 qm_compiler_dont_export_by_default()
 if(NOT "x${CMAKE_BUILD_TYPE}" STREQUAL "xDebug")
